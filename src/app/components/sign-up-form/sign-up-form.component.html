@@ -4,19 +4,23 @@
 	<form [formGroup]="signUpForm" (ngSubmit)="onSubmitSigninForm()">
 		<label for="first-name">First name</label>
 		<input type="text" formControlName="firstName" required>
-		<p *ngIf="firstName?.invalid && (firstName?.dirty || firstName?.touched)">{{getErrorMessage('firstName')}}</p>
+		<p *ngIf="firstName?.invalid && (firstName?.dirty || firstName?.touched)" class="message--error">
+			{{getErrorMessage('firstName')}}</p>
 
 		<label for="last-name">Last name</label>
 		<input type="text" formControlName="lastName" required>
-		<p *ngIf="lastName?.invalid && (lastName?.dirty || lastName?.touched)">{{getErrorMessage('lastName')}}</p>
+		<p *ngIf="lastName?.invalid && (lastName?.dirty || lastName?.touched)" class="message--error">
+			{{getErrorMessage('lastName')}}</p>
 
 		<label for="email">Email address</label>
 		<input type="email" formControlName="email" required>
-		<p *ngIf="email?.invalid && (email?.dirty || email?.touched)">{{getErrorMessage('email')}}</p>
+		<p *ngIf="email?.invalid && (email?.dirty || email?.touched)" class="message--error">
+			{{getErrorMessage('email')}}</p>
 
 		<label for="password">Password</label>
 		<input type="password" formControlName="password" required>
-		<p *ngIf="password?.invalid && (password?.dirty || password?.touched)">{{getErrorMessage('password')}}</p>
+		<p *ngIf="password?.invalid && (password?.dirty || password?.touched)" class="message--error">
+			{{getErrorMessage('password')}}</p>
 
 		<button type="submit" [disabled]="!signUpForm.valid">Sign up!</button>
 	</form>
