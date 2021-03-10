@@ -20,8 +20,10 @@
 		<label for="password">Password</label>
 		<input type="password" formControlName="password" required>
 		<p *ngIf="password?.invalid && (password?.dirty || password?.touched)" class="message--error">
-			{{getErrorMessage('password')}}</p>
-
+			{{getErrorMessage('password')}}
+		</p>
+		<!-- pattern="((?!{{signUpForm.value.firstName}}).)+" -->
 		<button type="submit" [disabled]="!signUpForm.valid">Sign up!</button>
 	</form>
+	<div [ngClass]="{'window':true, 'animate': signedUp}">{{feedback}}</div>
 </div>

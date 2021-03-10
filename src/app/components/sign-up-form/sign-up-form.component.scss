@@ -18,6 +18,34 @@ input {
 		}
 	}
 }
-	.message--error {
-		color: $color-danger;
+
+.message--error {
+	color: $color-danger;
+}
+
+.window {
+	background-color: rgb(75, 95, 97);
+	border: 3px inset #ccc;
+	border-radius: 5px;
+	box-shadow: 5px 7px 15px #ccc;
+	color: white;
+	font-weight: bold;
+	margin: 0 auto;
+	opacity: 0;
+	padding: 1rem 2rem;
+	position: relative;
+	text-align: center;
+	top: -55px;
+	width:50%;
+
+	&.animate {
+		animation-duration: 5s;
+		animation-name: fade-in-out;
 	}
+}
+@keyframes fade-in-out {
+	0% {opacity: 0;}
+	40% {opacity: 1;}
+	70% {opacity: 1;}
+	100% {opacity: 0;}
+}
