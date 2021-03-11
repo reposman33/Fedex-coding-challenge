@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders, HttpParams, HttpParamsOptions } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError } from "rxjs/operators";
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from "@angular/forms";
