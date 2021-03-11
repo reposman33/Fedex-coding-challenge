@@ -1,6 +1,6 @@
 <div class="container" role="main">
 
-	<h2>Sign up here</h2>
+	<h2 class="title">{{title}}</h2>
 	<form [formGroup]="signUpForm" (ngSubmit)="onSubmitSigninForm()">
 		<label for="first-name">First name</label>
 		<input type="text" formControlName="firstName" required>
