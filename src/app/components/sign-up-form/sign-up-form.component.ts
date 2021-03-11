@@ -30,7 +30,8 @@ export class SignUpFormComponent {
 		firstName: new FormControl("", [Validators.required]),
 		lastName: new FormControl("", [Validators.required]),
 		email: new FormControl("", [Validators.required, Validators.pattern(this.validEmailPattern)]),
-		password: new FormControl("", [Validators.required])
+		password: new FormControl("", [Validators.required, Validators.minLength(8),
+		Validators.pattern("(.*[a-z].*)(.*[A-Z].*)")])
 	})
 
 	get firstName() { return this.signUpForm.get("firstName") }
