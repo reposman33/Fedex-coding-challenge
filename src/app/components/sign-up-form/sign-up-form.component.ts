@@ -12,7 +12,7 @@ type HttpOptions = {
 	styleUrls: ['./sign-up-form.component.scss']
 })
 export class SignUpFormComponent {
-	title: string = 'signup-form';
+	title: string = 'Sign up with Fedex!';
 	feedback: string = "";
 	SIGN_UP_SUCCES: string = "Succesfully signed in";
 	SIGN_UP_ERROR: string = "Succesfully signed in";

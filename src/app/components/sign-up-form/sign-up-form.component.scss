@@ -1,26 +1,44 @@
-$color-danger: #a94442;
-$color-safe: #42A948;
+$color_danger: #a94442;
+$color_safe: #42A948;
+$color_input--text: #e8eaf3;
+$color_input--background: #5b7085;
+form {
+	display: flex;
+	flex-direction: column;
 
-input {
-	border-radius: 1rem;
+	input {
+		border-radius: .5rem;
+		color: $color_input--text;
+		font-weight: bold;
+		background-color: $color_input--background;
+		&.ng-valid[required], .ng-valid.required {
+			&.ng-touched  {
+				box-shadow: 0 0 6px 0 $color-safe inset;
+				border: 1px solid $color-safe;
+			}
+		}
 
-	&.ng-valid[required], .ng-valid.required {
-		&.ng-touched  {
-			box-shadow: 0 0 6px 0 $color-safe inset;
-			border: 1px solid $color-safe;
+		&.ng-invalid:not(form) {
+			&.ng-touched  {
+				border: 1px solid $color-danger;
+				box-shadow: 0 0 6px 0 $color-danger inset;
+			}
 		}
 	}
-
-	&.ng-invalid:not(form) {
-		&.ng-touched  {
-			border: 1px solid $color-danger;
-			box-shadow: 0 0 6px 0 $color-danger inset;
-		}
+	label {
+		margin-left: 1rem;
 	}
-}
 
-.message--error {
-	color: $color-danger;
+	.message--error {
+		color: $color-danger;
+	}
+
+	button {
+		align-self: flex-end;
+		border-radius: .5rem;
+		margin-top: 1rem;
+		width: auto;
+	}
 }
 
 .window {
