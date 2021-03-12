@@ -30,6 +30,7 @@ describe('SignUpFormComponent', () => {
 			}
 		}
 		expect(component).toBeDefined();
+		// throws error 'TypeError: Cannot read property 'onSubmitSigninForm' of undefined'
 		component.onSubmitSigninForm()
 		expect(component.onSubmitSigninForm).toHaveBeenCalled();
 	})
